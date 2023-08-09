@@ -3,7 +3,7 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: "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"
 });
 
 class Github {
@@ -106,16 +106,15 @@ searchUser.addEventListener("keyup", (event) => {
         delayedRequest = setTimeout(() => {
             github.getUser(userText)
             .then((userData) => {
-                console.log(userData);
                 if(userData.message === "Not Found") {
                     ui.showError(userData.message);
-                    console.log("ERROR");
                 } else {
                     github.getUserRepositories(userText)
                     .then((repositoriesData) => {
                         console.log(repositoriesData);
                         ui.showProfile(userData, repositoriesData.data);
                     })
+                    .catch((error) => ui.showError(error))
                 }
             })
         }, 500);
