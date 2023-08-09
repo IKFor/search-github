@@ -119,4 +119,4 @@ searchUser.addEventListener("keyup", (event) => {
             })
         }, 500);
     }
-})
+}) 
