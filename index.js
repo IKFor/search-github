@@ -3,13 +3,13 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 const octokit = new Octokit({
-    auth: ""
+    auth: "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"
 });
 
 class Github {
     constructor() {
-        this.clientId = "";
-        this.clientSecret = "";
+        this.clientId = "7638f5c51bdce2f0afde";
+        this.clientSecret = "edda3b8f244e07cb4e0fc0a7bdc0903e13bd3bb4";
     }
 
     async getUser(userName) {
