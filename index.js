@@ -111,7 +111,6 @@ searchUser.addEventListener("keyup", (event) => {
                 } else {
                     github.getUserRepositories(userText)
                     .then((repositoriesData) => {
-                        console.log(repositoriesData);
                         ui.showProfile(userData, repositoriesData.data);
                     })
                     .catch((error) => ui.showError(error))
