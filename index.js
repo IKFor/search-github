@@ -3,7 +3,7 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
 
 const octokit = new Octokit({
-    auth: "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"
+    auth: "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"
 });
 
 class Github {
