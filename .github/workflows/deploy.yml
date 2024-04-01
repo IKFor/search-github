@@ -1,0 +1,18 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  secrets-in-github-action:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set secrets
+        run: |
+          pwd
+          sed -i 's/AUTH_PLACEHOLDER/${{ secrets.AUTH }}/' src/index.js
+          sed -i 's/CLIENT_ID_PLACEHOLDER/${{ secrets.CLIENT_ID }}/' src/index.js
+          sed -i 's/CLIENT_SECRET_PLACEHOLDER/${{ secrets.CLIENT_SECRET }}/' src/index.js
