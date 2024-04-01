@@ -11,8 +11,15 @@ jobs:
 
     steps:
       - name: Set secrets
+<<<<<<< Updated upstream
         run: |
           pwd
           sed -i 's/AUTH_PLACEHOLDER/${{ secrets.AUTH }}/' src/index.js
           sed -i 's/CLIENT_ID_PLACEHOLDER/${{ secrets.CLIENT_ID }}/' src/index.js
           sed -i 's/CLIENT_SECRET_PLACEHOLDER/${{ secrets.CLIENT_SECRET }}/' src/index.js
+=======
+        env:
+          AUTH: ${{ secrets.AUTH }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+>>>>>>> Stashed changes

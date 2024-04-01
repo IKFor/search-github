@@ -2,6 +2,15 @@
 
 import { Octokit } from "https://esm.sh/@octokit/core";
 
+<<<<<<< Updated upstream:index.js
+=======
+console.log()
+
+const auth_key = process.env.AUTH;
+const client_id_key = process.env.CLIENT_ID;
+const client_secret_key = process.env.CLIENT_SECRET;
+
+>>>>>>> Stashed changes:src/index.js
 const octokit = new Octokit({
     auth: "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"
 });
